@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+  color: #fff;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/img.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 20px;
+  @media screen and (max-width: 995px) {
+    padding: 15px 5px;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.logo {
+  width: 17rem;
+  overflow: hidden;
+  display: block;
+  margin-right: 10px;
+  @media screen and (max-width: 995px) {
+    width: 15rem;
+  }
+}
+nav button {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: #ffff;
+  padding: 7px 20px;
+  font-size: 18px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  width: 110px;
+  height: 45px;
+  @media (max-width: 768px) {
+    font-size: 15px;
+    width: 90px;
+    height: 40px;
+    padding: 10px 10px;
+  }
+}
+.header-con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 100px;
+}
+.header-con h1 {
+  font-size: 4rem;
+  line-height: 70px;
+  font-weight: 600;
+  max-width: 650px;
+  @media screen and (max-width: 995px) {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3rem;
+    margin: 60px 0;
+    max-width: 650px;
+  }
+}
+.header-con h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.email {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+  @media screen and (max-width: 995px) {
+    margin-bottom: 70px;
+    width: 100%;
+  }
+}
+.email input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  margin-left: 20px;
+  background: none;
+  font-size: 23px;
+  border: 1px solid white;
+  height: 7.6vh;
+  padding: 12px;
+  color: #fff;
+  @media screen and (max-width: 995px) {
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px 5px;
+  }
+}
+.email button {
+  background: #db0001;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 12px 20px;
+  margin-left: 15px;
+  @media screen and (max-width: 995px) {
+    font-size: 10px;
+
+    padding: 10px 10px;
+  }
+}
+
+.second {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  padding: 20px 150px;
+  justify-content: space-between;
+
+  @media screen and (max-width: 995px) {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 995px) {
+  .two {
+    flex-direction: column-reverse;
+  }
+}
+
+.second .para {
+  display: flex;
+  flex-direction: column;
+}
+.second h1 {
+  margin-bottom: 9px;
+  font-size: 3.2rem;
+  font-weight: 800;
+  @media (max-width: 995px) {
+    font-size: 1.7rem;
+  }
+}
+.para h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  @media (max-width: 995px) {
+    font-size: 1rem;
+  }
+}
+.faq {
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+}
+.faq h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.list {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+.list li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.list li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+label::after {
+  content: "+";
+  font-size: 28px;
+  right: 20px;
+  position: absolute;
+  transition: transform 0.5s;
+}
+input[type="radio"] {
+  display: none;
+}
+.list .ans {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+.list input [type="radio"]:checked + label + .ans {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.list input [type="radio"]:checked + label ::after {
+  transform: rotate(135deg);
+}
+.last p {
+  align-items: center;
+  font-size: 1.2rem;
+}
+.last form {
+  margin-bottom: 10%;
+}
+
+.mail input {
+  width: 25%;
+  height: 20%;
+  margin-top: 20px;
+  padding: 15px 20px;
+  outline: none;
+  overflow: hidden;
+  background: none;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.mail button {
+  background: #db0001;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 12px 28px;
+  margin-left: 5px;
+  border-radius: 4px;
+}
+.last_page {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: black;
+  padding: 12px 10%;
+  flex-wrap: wrap;
+  @media screen and (max-width: 995px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-right: 40px;
+  @media screen and (max-width: 995px) {
+    align-items: center;
+    padding-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+.data a {
+  justify-content: flex-start;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.785rem;
+  font-weight: 400;
+  margin: 10px;
+  cursor: pointer;
+  @media screen and (max-width: 995px) {
+    text-align: center;
+  }
+}
+.data button {
+  width: 125px;
+  height: 32px;
+  background-color: #303030;
+  margin: 15px;
+  border-radius: 4px;
+  border: 1px solid white;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 30px;
+}
+.question {
+  display: block;
+  font-size: 1rem;
+  margin-left: 14.5%;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 995px) {
+  h1,
+  h4 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .second {
+    padding-inline: 5%;
+  }
+  .tv {
+    width: 100%;
+  }
+}
